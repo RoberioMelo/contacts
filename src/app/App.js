@@ -110,18 +110,19 @@ class App extends Component {
     return (
       <div>
         {/* NAVIGATION */}
-        <nav className="blue accent-4">
-          <div className="container">
-            <a href="#!" className="brand-logo"><i className="material-icons">contact_phone</i>Contacts</a>
-            <form action="" className="browser-default right">
-              <div className="input-field">
-                <ul class="browser-default right">
-                <input id="search-input" placeholder="Search" type="text"  autoFocus/>   
-                 </ul>
-                </div>
-              </form>              
-          </div>
+        <div class="navbar-fixed">
+          <nav className="blue">
+            <div class="container">          
+              <a href="#!" className="brand-logo"><i className="material-icons">contact_phone</i>Contacts</a>          
+                </div>           
+                <div className="nav-wrapper">
+                  <div className="right input-field">
+                <input id="search" type="search" placeholder="Buscar..." />
+              <label className="label-icon" for="search"><i className="material-icons">search</i></label>               
+            </div>
+          </div>         
         </nav>
+        </div>
         <div className="container">
           <div className="row">
             <div className="col s5">
@@ -138,13 +139,9 @@ class App extends Component {
                         <input name="description" onChange={this.handleChange} value={this.state.description} type="number" placeholder="Telefone" autoFocus/>
                       </div>
                     </div>
-                    
-                
-
                     <button type="submit" className="waves-effect blue accent-4 btn"><i className="material-icons right">account_box</i>
                     Salvar
-                    </button>
-                    
+                    </button>                    
                   </form>
                 </div>
               </div>
