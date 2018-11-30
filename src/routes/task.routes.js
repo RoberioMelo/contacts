@@ -8,12 +8,15 @@ const Task = require('../models/task');
 router.get('/', async (req, res) => {
   const tasks = await Task.find();
   res.json(tasks);
+  
 });
 
 // todas as Tasks
 router.get('/:id', async (req, res) => {
   const task = await Task.findById(req.params.id);
   res.json(task);
+  
+  
 });
 
 // ADICIONAR uma nova task
@@ -22,6 +25,7 @@ router.post('/', async (req, res) => {
   const task = new Task({title, description});
   await task.save();
   res.json({status: 'Salvo'});
+ 
 });
 
 // Atualiza uma nova task
@@ -30,6 +34,7 @@ router.put('/:id', async (req, res) => {
   const newTask = {title, description};
   await Task.findByIdAndUpdate(req.params.id, newTask);
   res.json({status: 'Atualizado'});
+ 
 });
 
 router.delete('/:id', async (req, res) => {

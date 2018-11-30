@@ -33,6 +33,7 @@ class App extends Component {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
+          
         }
       })
         .then(res => res.json())
@@ -115,7 +116,7 @@ class App extends Component {
             <div class="container">          
               <a href="#!" className="brand-logo"><i className="material-icons">contact_phone</i>Contacts</a>          
                 </div>           
-                         
+                     
         </nav>
         </div>
         <div className="container">
