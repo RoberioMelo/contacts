@@ -115,12 +115,7 @@ class App extends Component {
             <div class="container">          
               <a href="#!" className="brand-logo"><i className="material-icons">contact_phone</i>Contacts</a>          
                 </div>           
-                <div className="nav-wrapper">
-                  <div className="right input-field">
-                <input id="search" type="search" placeholder="Buscar..." />
-              <label className="label-icon" for="search"><i className="material-icons">search</i></label>               
-            </div>
-          </div>         
+                         
         </nav>
         </div>
         <div className="container">
